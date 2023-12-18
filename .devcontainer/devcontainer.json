@@ -1,0 +1,64 @@
+{
+	"name": "Template",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	"remoteEnv": {
+		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"editor.codeActionsOnSave": {
+					"source.fixAll": false,
+					"source.fixAll.eslint": true
+				},
+				"editor.defaultFormatter": null,
+				"editor.formatOnSave": true,
+				"files.autoSave": "onFocusChange",
+				"debug.inlineValues": "on",
+				"debug.openDebug": "openOnSessionStart",
+				"debug.internalConsoleOptions": "openOnSessionStart",
+				"editor.dragAndDrop": false,
+				"editor.renderWhitespace": "all",
+				"editor.showFoldingControls": "always",
+				"editor.minimap.maxColumn": 40,
+				"editor.minimap.showSlider": "always",
+				"editor.minimap.size": "fit",
+				"editor.formatOnPaste": true,
+				"files.insertFinalNewline": true,
+				"files.eol": "\n",
+				"files.exclude": {
+					"**/.git": true,
+					"**/.svn": true,
+					"**/.hg": true,
+					"**/CVS": true,
+					"**/.DS_Store": true,
+					"**/Thumbs.db": true,
+					"**/node_modules": true
+				},
+				"files.watcherExclude": {
+					"**/.git/objects/**": true,
+					"**/.git/subtree-cache/**": true,
+					"**/node_modules/*/**": true,
+					"**/.hg/store/**": true
+				},
+				"search.exclude": {
+					"**/node_modules": true,
+					"**/bower_components": true,
+					"**/*.code-search": true
+				},
+				"workbench.iconTheme": "material-icon-theme"
+			},
+			"extensions": [
+				"christian-kohler.npm-intellisense",
+				"dbaeumer.vscode-eslint",
+				"PKief.material-icon-theme",
+				"MS-CEINTL.vscode-language-pack-ja",
+				"MisterJ.vue-volar-extention-pack"
+			]
+		}
+	},
+	"onCreateCommand": "npm install -g npm@latest && npm i",
+	"remoteUser": "root"
+}
